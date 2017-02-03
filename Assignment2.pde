@@ -18,4 +18,5 @@ void draw()
   background.DrawBackground();
   sumo.drawSumoL();
   sumo.drawSumoR();
+  sumo.drawSumoD();
 }
