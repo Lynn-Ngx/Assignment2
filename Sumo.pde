@@ -82,4 +82,25 @@ class Sumo
     line(width/2 + 10, moveY + height/2-5, width/2 + 30,moveY + height/2-5);
     line(width/2 - 10, moveY + height/2-5, width/2 - 30,moveY +  height/2-5);
   }
+  
+  void drawSumoU()
+  {
+    stroke(0);
+    fill(254, 209, 146);
+    rect(width/2 - 25,moveY + height/2 - 90, 50, 50, 10);
+    ellipse(275,moveY + 320, 30, 30);
+    ellipse(375, moveY + 320, 30, 30);
+    rect(275,moveY + 357, 35, 20, 5);
+    rect(340, moveY + 357, 35, 20, 5);
+    ellipse(width/2, moveY + height/2, 100, 100);
+    stroke(253, 153, 51);
+    line(width/2 - 20, moveY +height/2 - 100, width/2 + 5,moveY + height/2 - 85);
+    noStroke();
+    fill(0);
+    rect(width/2 - 25,moveY +height/2 - 90, 50, 30, 10);
+    rect(width/2 - 10,moveY + height/2 - 105, 20, 20, 5);
+    stroke(0);
+    fill(252, 13, 27);
+    triangle(275, moveY + 330, 325,moveY +  375, 375,moveY +  330);
+  }
 }

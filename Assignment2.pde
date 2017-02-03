@@ -19,4 +19,5 @@ void draw()
   sumo.drawSumoL();
   sumo.drawSumoR();
   sumo.drawSumoD();
+  sumo.drawSumoU();
 }
