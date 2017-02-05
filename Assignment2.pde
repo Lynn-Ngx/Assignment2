@@ -2,6 +2,7 @@ Sumo sumo;
 Background background;
 Main main;
 Score score;
+Instructions instructions;
 
 float scale = 0.4;
 float scale1 = 0.009;
@@ -28,7 +29,10 @@ String s3 = "Settings";
 String q = "PLAYER WINS: ";
 String q2 = "COMPUTER WINS: ";
 String q3 = "ROUNDS: ";
-
+String w = "Instructions";
+String w2 = "Control your character and attempt to";
+String w3 = "bump the othetr players off of the sides";
+String w4 = "Use the arrow keys to move your player";
 
 void setup()
 {
@@ -38,13 +42,15 @@ void setup()
   main = new Main();
   background = new Background();
   score = new Score();
+  instructions = new Instructions();
 }
 
 void draw()
 {
   background(128, 216, 253);
   //main.drawMain();
-  background.drawBackground();
+  //background.drawBackground();
+  instructions.drawInstructions();
   
   /*if (rightDirection){
       sumo.drawSumoR();
