@@ -1,10 +1,11 @@
 class Background
 {
-  void DrawBackground()
+  void drawBackground()
   {
+    score.drawScore();
     fill(27, 169, 210);
-    rect(10, 100, 200, 700, 300);
     noStroke();
+    rect(10, 100, 200, 700, 300);
     triangle(307, 130, 100, 700, 325, 700);
     triangle(592, 130, 800, 700, 592, 700);
     rect(300, 40, 300, 800, 400);

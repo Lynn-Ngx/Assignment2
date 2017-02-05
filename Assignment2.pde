@@ -1,6 +1,7 @@
 Sumo sumo;
 Background background;
 Main main;
+Score score;
 
 float scale = 0.4;
 float scale1 = 0.009;
@@ -24,6 +25,10 @@ String s = "Super Sumo";
 String s1 = "Play";
 String s2 = "Instructions";
 String s3 = "Settings";
+String q = "PLAYER WINS: ";
+String q2 = "COMPUTER WINS: ";
+String q3 = "ROUNDS: ";
+
 
 void setup()
 {
@@ -32,13 +37,14 @@ void setup()
   sumo = new Sumo();
   main = new Main();
   background = new Background();
+  score = new Score();
 }
 
 void draw()
 {
   background(128, 216, 253);
-  main.drawMain();
-  //background.DrawBackground();
+  //main.drawMain();
+  background.drawBackground();
   
   /*if (rightDirection){
       sumo.drawSumoR();
