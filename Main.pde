@@ -8,7 +8,7 @@ class Main
     fill(255);
     textFont(f);
     text(s, 140, 180);
-    //button();
+    button();
     rect(220, 250, 200, 50, 5);
     rect(220, 350, 200, 50, 5);
     rect(220, 450, 200, 50, 5);
@@ -79,6 +79,51 @@ class Main
     line(width/2 + 40, 320, width/2 + 20 , 320);
     fill(254, 209, 146);
     ellipse(width/2 + 10, height/2 + 10, 30, 30);
+  }
+  
+  void button()
+  {
+    // Test if the cursor is over the box 
+    if (mouseX > 220 && mouseX < 220+boxWidth && 
+    mouseY > 250 && mouseY < 250+boxHeight)
+    {
+      overBox = true;  
+      if(!locked) 
+      { 
+         stroke(252, 13, 27); 
+         rect(220, 250, 200, 50, 5);
+      } 
+    } 
+    
+    if (mouseX > 220 && mouseX < 220+boxWidth && 
+    mouseY > 350 && mouseY < 350+boxHeight)
+    {
+      overBox2 = true;  
+      if(!locked) 
+      { 
+        stroke(252, 13, 27); 
+        rect(220, 350, 200, 50, 5);
+      } 
+    } 
+    
+    if (mouseX > 220 && mouseX < 220+boxWidth && 
+    mouseY > 450 && mouseY < 450+boxHeight)
+    {
+      overBox3 = true;  
+      if(!locked) 
+      { 
+        stroke(252, 13, 27); 
+        rect(220, 450, 200, 50, 5);
+      } 
+    } 
+  
+    else {
+      stroke(0);
+      fill(255);
+      overBox = false;
+      overBox2 = false;
+      overBox3 = false;
+    }
   }
 }
   
