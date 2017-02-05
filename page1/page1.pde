@@ -1,27 +1,44 @@
-class Main
+String s = "Super Sumo";
+String s1 = "Play";
+String s2 = "Instructions";
+String s3 = "Settings";
+
+boolean overBox = false;
+boolean overBox2 = false;
+boolean overBox3 = false;
+boolean locked = false;
+
+float boxWidth = 200;
+float boxHeight = 50;
+
+void setup()
 {
-  void drawMain()
-  {
-    background(128, 216, 253);
-    PFont f = createFont("Herculanum", 65);
-    PFont f1 = createFont("Bradley Hand", 30);
-    fill(255);
-    textFont(f);
-    text(s, 140, 180);
-    //button();
-    rect(220, 250, 200, 50, 5);
-    rect(220, 350, 200, 50, 5);
-    rect(220, 450, 200, 50, 5);
-    fill(0);
-    textFont(f1);
-    text(s1, 290, 280);
-    text(s2, 240, 385);
-    text(s3, 265, 485);
-    drawSumoL();
-    drawSumoR();
-  }
+ size(650, 650); 
+}
+
+void draw()
+{
+  background(128, 216, 253);
+  PFont f = createFont("Herculanum", 65);
+  PFont f1 = createFont("Bradley Hand", 30);
+  fill(255);
+  textFont(f);
+  text(s, 140, 180);
+  button();
+  rect(220, 250, 200, 50, 5);
+  rect(220, 350, 200, 50, 5);
+  rect(220, 450, 200, 50, 5);
+  fill(0);
+  textFont(f1);
+  text(s1, 290, 280);
+  text(s2, 240, 385);
+  text(s3, 265, 485);
+  drawSumoL();
+  drawSumoR();
   
-  void drawSumoL()
+}
+
+void drawSumoL()
   {
     translate(220, 100);
     scale(1);
@@ -80,5 +97,48 @@ class Main
     fill(254, 209, 146);
     ellipse(width/2 + 10, height/2 + 10, 30, 30);
   }
-}
   
+  void button()
+  {
+    // Test if the cursor is over the box 
+  if (mouseX > 220 && mouseX < 220+boxWidth && 
+      mouseY > 250 && mouseY < 250+boxHeight)
+    {
+    overBox = true;  
+    if(!locked) 
+    { 
+      stroke(252, 13, 27); 
+     rect(220, 250, 200, 50, 5);
+    } 
+    } 
+    
+    if (mouseX > 220 && mouseX < 220+boxWidth && 
+      mouseY > 350 && mouseY < 350+boxHeight)
+    {
+    overBox2 = true;  
+    if(!locked) 
+    { 
+      stroke(252, 13, 27); 
+      rect(220, 350, 200, 50, 5);
+    } 
+    } 
+    
+    if (mouseX > 220 && mouseX < 220+boxWidth && 
+      mouseY > 450 && mouseY < 450+boxHeight)
+    {
+    overBox3 = true;  
+    if(!locked) 
+    { 
+      stroke(252, 13, 27); 
+      rect(220, 450, 200, 50, 5);
+    } 
+    } 
+  
+  else {
+    stroke(0);
+    fill(255);
+    overBox = false;
+    overBox2 = false;
+    overBox3 = false;
+  }
+  }

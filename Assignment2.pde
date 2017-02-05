@@ -1,15 +1,25 @@
 Sumo sumo;
 Background background;
 Main main;
+
 float scale = 0.4;
 float scale1 = 0.009;
 float moveX;
 float moveY;
 float xSpeed = 30;
+
 boolean leftDirection = true;
 boolean rightDirection;
 boolean downDirection;
 boolean upDirection;
+boolean overBox = false;
+boolean overBox2 = false;
+boolean overBox3 = false;
+boolean locked = false;
+
+float boxWidth = 200;
+float boxHeight = 50;
+
 String s = "Super Sumo";
 String s1 = "Play";
 String s2 = "Instructions";
