@@ -1,3 +1,9 @@
+//Importing audio
+import ddf.minim.*;
+
+AudioPlayer player;
+Minim minim;//audio context
+
 Sumo sumo;
 Background background;
 Main main;
@@ -38,6 +44,11 @@ void setup()
 {
   size(650, 650); 
   
+  //laoding the song
+  minim = new Minim(this);
+  player = minim.loadFile("Touch.mp3", 2048);
+  player.play();
+  
   sumo = new Sumo();
   main = new Main();
   background = new Background();
@@ -48,9 +59,9 @@ void setup()
 void draw()
 {
   background(128, 216, 253);
-  //main.drawMain();
+  main.drawMain();
   //background.drawBackground();
-  instructions.drawInstructions();
+  //instructions.drawInstructions();
   
   /*if (rightDirection){
       sumo.drawSumoR();
@@ -107,4 +118,11 @@ void keyPressed()
     moveY = moveY - xSpeed; 
     scale = scale - scale1;
   }
+}
+
+void stop()
+{
+  player.close();
+  minim.stop();
+  super.stop();
 }
