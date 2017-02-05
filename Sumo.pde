@@ -2,6 +2,8 @@ class Sumo
 {
   void drawSumoL()
   {
+    translate(420, 250);
+    scale(scale);
     stroke(0);
     fill(254, 209, 146);
     rect(moveX + 320, 375, 35, 20, 5);
@@ -30,6 +32,8 @@ class Sumo
   
   void drawSumoR()
   {
+    translate(420, 250);
+    scale(scale);
     stroke(0);
     fill(254, 209, 146);
     rect(moveX + 320, 375, 35, 20, 5);
@@ -58,6 +62,8 @@ class Sumo
   
   void drawSumoD()
   {
+    translate(420, 250);
+    scale(scale);
     stroke(0);
     fill(254, 209, 146);
     ellipse(width/2,moveY + height/2, 100, 100);
@@ -85,6 +91,8 @@ class Sumo
   
   void drawSumoU()
   {
+    translate(420, 250);
+    scale(scale);
     stroke(0);
     fill(254, 209, 146);
     rect(width/2 - 25,moveY + height/2 - 90, 50, 50, 10);

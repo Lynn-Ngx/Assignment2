@@ -1,28 +1,36 @@
 Sumo sumo;
 Background background;
-//float scale = 0.5;
-//float scale1 = 0.05;
+Main main;
+float scale = 0.4;
+float scale1 = 0.009;
 float moveX;
 float moveY;
-float xSpeed = 10;
+float xSpeed = 30;
 boolean leftDirection = true;
 boolean rightDirection;
 boolean downDirection;
 boolean upDirection;
+String s = "Super Sumo";
+String s1 = "Play";
+String s2 = "Instructions";
+String s3 = "Settings";
+
 void setup()
 {
   size(650, 650); 
   
   sumo = new Sumo();
+  main = new Main();
   background = new Background();
 }
 
 void draw()
 {
   background(128, 216, 253);
-  background.DrawBackground();
+  main.drawMain();
+  //background.DrawBackground();
   
-  if (rightDirection){
+  /*if (rightDirection){
       sumo.drawSumoR();
   }
   
@@ -36,7 +44,7 @@ void draw()
   
   if (upDirection){
       sumo.drawSumoU();
-  }
+  }*/
 }
 
 void keyPressed() 
@@ -65,7 +73,7 @@ void keyPressed()
     upDirection = false;
     downDirection = true;
     moveY = moveY + xSpeed; 
-    //scale = scale + scale1;
+    scale = scale + scale1;
   }
   
   if (keyCode == UP) 
@@ -75,6 +83,6 @@ void keyPressed()
     downDirection = false;
     upDirection = true;
     moveY = moveY - xSpeed; 
-    //scale = scale - scale1;
+    scale = scale - scale1;
   }
 }
