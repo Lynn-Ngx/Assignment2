@@ -12,7 +12,7 @@ class Settings
       noFill();
       rect(450, 245, 40, 40, 5);
       rect(450, 335, 40, 40, 5);
-     // button();
+      button();
       noStroke();
       fill(255);
       ellipse(470, 265, 20, 20);
@@ -51,5 +51,73 @@ class Settings
     fill(255, 0, 0);
     line(width/2 + 10, height/2-5, width/2 + 30, height/2-5);
     line(width/2 - 10, height/2-5, width/2 - 30, height/2-5);
+  }
+  
+  void button()
+  {
+    // Test if the cursor is over the box 
+    if (mouseX > 450 && mouseX < 450+40 && 
+    mouseY > 250 && mouseY < 250+40)
+    {
+      overBox4 = true;  
+      if(!locked1) 
+      { 
+         strokeWeight(2);
+         stroke(0); 
+         rect(450, 245, 40, 40, 5);
+      } 
+    } 
+    
+    else {
+     overBox4 = false; 
+    }
+    
+    if (mouseX > 450 && mouseX < 450+40 && 
+    mouseY > 335 && mouseY < 335+40)
+    {
+      overBox5 = true;  
+      if(!locked1) 
+      { 
+         strokeWeight(2);
+         stroke(0); 
+         rect(450, 335, 40, 40, 5);
+      } 
+    } 
+    
+    else {
+      stroke(255);
+      strokeWeight(1);
+      overBox5 = false;
+    }
+  }
+  
+  void mousePressed() 
+  {
+    if((overBox4) && (playing == false))
+    { 
+      
+       locked1 = true;
+       minim = new Minim(this);
+       player = minim.loadFile("Touch.mp3", 2048);
+       player.play(); 
+       playing = true;
+       overBox4 = false;
+       locked1 = false;
+    } 
+    
+    if((overBox5) && (playing == true))
+    { 
+       locked1 = true;
+       player.pause();
+       playing = false;
+       overBox5 = false;
+       overBox4 = true;
+       locked1 = false;
+    }
+    else 
+    {
+       overBox4 = false;
+       overBox5 = false;
+    }
   }
 }
