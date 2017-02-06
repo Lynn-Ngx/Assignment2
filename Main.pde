@@ -8,10 +8,11 @@ class Main
     fill(255);
     textFont(f);
     text(s, 140, 180);
-    button();
+    strokeWeight(1);
     rect(220, 250, 200, 50, 5);
     rect(220, 350, 200, 50, 5);
     rect(220, 450, 200, 50, 5);
+    button();
     fill(0);
     textFont(f1);
     text(s1, 290, 280);
@@ -25,6 +26,7 @@ class Main
   {
     translate(220, 100);
     scale(1);
+    strokeWeight(2);
     stroke(0);
     fill(254, 209, 146);
     rect(320, 375, 35, 20, 5);
@@ -55,6 +57,7 @@ class Main
   {
     translate(-430, 0);
     scale(1);
+    strokeWeight(2);
     stroke(0);
     fill(254, 209, 146);
     rect(320, 375, 35, 20, 5);
@@ -90,7 +93,8 @@ class Main
       overBox = true;  
       if(!locked) 
       { 
-         stroke(252, 13, 27); 
+         strokeWeight(2);
+         stroke(0);
          rect(220, 250, 200, 50, 5);
       } 
     } 
@@ -101,7 +105,8 @@ class Main
       overBox2 = true;  
       if(!locked) 
       { 
-        stroke(252, 13, 27); 
+        strokeWeight(2);
+        stroke(0);
         rect(220, 350, 200, 50, 5);
       } 
     } 
@@ -112,12 +117,14 @@ class Main
       overBox3 = true;  
       if(!locked) 
       { 
-        stroke(252, 13, 27); 
+        strokeWeight(2);
+        stroke(0);
         rect(220, 450, 200, 50, 5);
       } 
     } 
   
     else {
+      strokeWeight(1);
       stroke(0);
       fill(255);
       overBox = false;

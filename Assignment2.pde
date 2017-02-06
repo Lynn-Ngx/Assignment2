@@ -9,6 +9,7 @@ Background background;
 Main main;
 Score score;
 Instructions instructions;
+Settings settings;
 
 float scale = 0.4;
 float scale1 = 0.009;
@@ -24,6 +25,15 @@ boolean overBox = false;
 boolean overBox2 = false;
 boolean overBox3 = false;
 boolean locked = false;
+
+String a = "Settings";
+String a2 = "Music On";
+String a3 = "Music Off";
+
+Boolean overBox4 = false;
+Boolean overBox1 = false;
+Boolean locked1 = false;
+Boolean playing = true;
 
 float boxWidth = 200;
 float boxHeight = 50;
@@ -54,12 +64,14 @@ void setup()
   background = new Background();
   score = new Score();
   instructions = new Instructions();
+  settings = new Settings();
 }
 
 void draw()
 {
   background(128, 216, 253);
-  main.drawMain();
+  settings.drawSettings();
+  //main.drawMain();
   //background.drawBackground();
   //instructions.drawInstructions();
   
