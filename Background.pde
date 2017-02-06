@@ -3,6 +3,7 @@ class Background
   void drawBackground()
   {
     score.drawScore();
+    strokeWeight(1);
     fill(27, 169, 210);
     noStroke();
     rect(10, 100, 200, 700, 300);
@@ -14,9 +15,9 @@ class Background
     arc(110, 190, 220, 220, 0+3.1, PI+3.1);
     arc(450, 150, 300, 230, 0+3.15, PI+3.15);
     fill(35, 204, 253);
+    noStroke();
     triangle(75, 400, 30, 700, 75, 700);
     triangle(574, 395, 625, 700, 574, 700);
-    noStroke();
     rect(75, 400, 500, 250);
     fill(255);
     noStroke();
@@ -41,5 +42,69 @@ class Background
     arc(83, 413, 30, 30, 0, PI+0.9);
     stroke(0); 
     ellipse(325, 400, 500, 200);
+    PFont f1 = createFont("Bradley Hand", 30);
+    textFont(f1);
+    text(w5, 50, 625);
+    stroke(255);
+    noFill();
+    rect(10, 590, 150, 50, 5);
+    button();
+    
+    if (rightDirection){
+        sumo.drawSumoR();
     }
+    
+    if (leftDirection){
+        sumo.drawSumoL();
+    }
+    
+    if (downDirection){
+        sumo.drawSumoD();
+    }
+    
+    if (upDirection){
+        sumo.drawSumoU();
+    }
+    }
+    
+    void button()
+  {
+    // Test if the cursor is over the box 
+    if (mouseX > 10 && mouseX < 10+150 && 
+    mouseY > 590 && mouseY < 590+50)
+    {
+      overBox8 = true;  
+      if(!locked) 
+      { 
+         strokeWeight(3);
+         stroke(255);
+         rect(10, 590, 150, 50, 5);
+      } 
+    } 
+    
+    else 
+    {
+      strokeWeight(1);
+      stroke(255);
+      overBox8 = false;
+    }
+  }
+  
+  void mousePressed() 
+  {
+    if(overBox8) 
+    { 
+       locked = true;
+       drawMain = true;
+       drawPlay = false;
+       overBox8 = false;
+       locked = false;
+       drawBackground = false;
+    }
+    
+    else 
+    {
+       overBox8 = false;
+    }
+  }
 }

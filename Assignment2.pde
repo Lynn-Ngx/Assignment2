@@ -29,13 +29,21 @@ Boolean drawMain = true;
 Boolean drawPlay = false;
 Boolean drawInstructions = false;
 Boolean drawSettings = false;
+Boolean drawBackground = false;
+
+Boolean on = true;
+Boolean off = false;
 
 String a = "Settings";
 String a2 = "Music On";
 String a3 = "Music Off";
+String w5 = "Back";
 
 Boolean overBox4 = false;
 Boolean overBox5 = false;
+Boolean overBox6 = false;
+Boolean overBox7 = false;
+Boolean overBox8 = false;
 Boolean locked1 = false;
 Boolean playing = true;
 
@@ -59,9 +67,9 @@ void setup()
   size(650, 650); 
   
   //laoding the song
-  //minim = new Minim(this);
-  //player = minim.loadFile("Touch.mp3", 2048);
-  //player.play();
+  minim = new Minim(this);
+  player = minim.loadFile("Touch.mp3", 2048);
+  player.play();
   
   sumo = new Sumo();
   main = new Main();
@@ -74,7 +82,7 @@ void setup()
 void draw()
 {
   background(128, 216, 253);
-  //settings.drawSettings();
+
   if(drawMain)
   {
     main.drawMain();
@@ -94,70 +102,20 @@ void draw()
   {
     settings.drawSettings();
   }
-  //background.drawBackground();
-  //instructions.drawInstructions();
-  /*
-  if (rightDirection){
-      sumo.drawSumoR();
-  }
   
-  if (leftDirection){
-      sumo.drawSumoL();
-  }
-  
-  if (downDirection){
-      sumo.drawSumoD();
-  }
-  
-  if (upDirection){
-      sumo.drawSumoU();
-  }*/
 }
 
 void mousePressed() {
  main.mousePressed(); 
+ settings.mousePressed();
+ instructions.mousePressed();
+ background.mousePressed();
 }
 
-/*
-void keyPressed() 
-{
-  if (keyCode == RIGHT)
-  {
-    rightDirection = true;
-    leftDirection = false;
-    downDirection = false;
-    moveX = moveX + xSpeed;
-  } 
-  
-  if (keyCode == LEFT) 
-  {
-    rightDirection = false;
-    leftDirection = true;
-    upDirection = false;
-    downDirection = false;
-    moveX = moveX - xSpeed;  
-  }
-  
-  if (keyCode == DOWN) 
-  {
-    rightDirection = false;
-    leftDirection = false;
-    upDirection = false;
-    downDirection = true;
-    moveY = moveY + xSpeed; 
-    scale = scale + scale1;
-  }
-  
-  if (keyCode == UP) 
-  {
-    rightDirection = false;
-    leftDirection = false;
-    downDirection = false;
-    upDirection = true;
-    moveY = moveY - xSpeed; 
-    scale = scale - scale1;
-  }
-}*/
+//void keyPressed() {
+ //sumo.keyPressed(); 
+//}
+
 
 void stop()
 {

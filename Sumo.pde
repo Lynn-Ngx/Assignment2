@@ -2,6 +2,7 @@ class Sumo
 {
   void drawSumoL()
   {
+    strokeWeight(1);
     translate(420, 250);
     scale(scale);
     stroke(0);
@@ -32,6 +33,7 @@ class Sumo
   
   void drawSumoR()
   {
+    strokeWeight(1);
     translate(420, 250);
     scale(scale);
     stroke(0);
@@ -62,6 +64,7 @@ class Sumo
   
   void drawSumoD()
   {
+    strokeWeight(1);
     translate(420, 250);
     scale(scale);
     stroke(0);
@@ -91,6 +94,7 @@ class Sumo
   
   void drawSumoU()
   {
+    strokeWeight(1);
     translate(420, 250);
     scale(scale);
     stroke(0);
@@ -110,5 +114,45 @@ class Sumo
     stroke(0);
     fill(252, 13, 27);
     triangle(275 + moveX, moveY + 330, 325 + moveX,moveY +  375, 375 + moveX,moveY +  330);
+  }
+}
+
+void keyPressed() 
+{
+  if (keyCode == RIGHT)
+  {
+    rightDirection = true;
+    leftDirection = false;
+    downDirection = false;
+    moveX = moveX + xSpeed;
+  } 
+  
+  if (keyCode == LEFT) 
+  {
+    rightDirection = false;
+    leftDirection = true;
+    upDirection = false;
+    downDirection = false;
+    moveX = moveX - xSpeed;  
+  }
+  
+  if (keyCode == DOWN) 
+  {
+    rightDirection = false;
+    leftDirection = false;
+    upDirection = false;
+    downDirection = true;
+    moveY = moveY + xSpeed; 
+    scale = scale + scale1;
+  }
+  
+  if (keyCode == UP) 
+  {
+    rightDirection = false;
+    leftDirection = false;
+    downDirection = false;
+    upDirection = true;
+    moveY = moveY - xSpeed; 
+    scale = scale - scale1;
   }
 }

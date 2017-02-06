@@ -12,6 +12,11 @@ class Instructions
     text(w2, 100, 250);
     text(w3, 100, 300);
     text(w4, 100, 400);
+    text(w5, 50, 45);
+    stroke(255);
+    noFill();
+    rect(10, 10, 150, 50, 5);
+    button();
     drawSumoD();
   }
   
@@ -19,6 +24,7 @@ class Instructions
   {
     translate(10, 250);
     scale(1);
+    strokeWeight(2);
     stroke(0);
     fill(254, 209, 146);
     ellipse(width/2, height/2, 100, 100);
@@ -42,5 +48,46 @@ class Instructions
     fill(255, 0, 0);
     line(width/2 + 10, height/2-5, width/2 + 30, height/2-5);
     line(width/2 - 10, height/2-5, width/2 - 30, height/2-5);
+  }
+  
+  void button()
+  {
+    // Test if the cursor is over the box 
+    if (mouseX > 10 && mouseX < 10+150 && 
+    mouseY > 10 && mouseY < 10+50)
+    {
+      overBox6 = true;  
+      if(!locked) 
+      { 
+         strokeWeight(3);
+         stroke(255);
+         rect(10, 10, 150, 50, 5);
+      } 
+    } 
+    
+    else 
+    {
+      strokeWeight(1);
+      stroke(255);
+      overBox6 = false;
+    }
+  }
+  
+  void mousePressed() 
+  {
+    if(overBox6) 
+    { 
+       locked = true;
+       drawMain = true;
+       drawPlay = false;
+       overBox6 = false;
+       locked = false;
+       drawInstructions = false;
+    }
+    
+    else 
+    {
+       overBox6 = false;
+    }
   }
 }

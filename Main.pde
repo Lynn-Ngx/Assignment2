@@ -2,7 +2,6 @@ class Main
 {
   void drawMain()
   {
-    //System.out.println(locked);
     background(128, 216, 253);
     PFont f = createFont("Herculanum", 65);
     PFont f1 = createFont("Bradley Hand", 30);
@@ -140,7 +139,6 @@ class Main
   
   void mousePressed() 
   {
-    System.out.println(overBox);
     if(overBox) 
     { 
        locked = true;
