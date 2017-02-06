@@ -55,9 +55,9 @@ void setup()
   size(650, 650); 
   
   //laoding the song
-  minim = new Minim(this);
-  player = minim.loadFile("Touch.mp3", 2048);
-  player.play();
+  //minim = new Minim(this);
+  //player = minim.loadFile("Touch.mp3", 2048);
+  //player.play();
   
   sumo = new Sumo();
   main = new Main();
@@ -70,12 +70,12 @@ void setup()
 void draw()
 {
   background(128, 216, 253);
-  settings.drawSettings();
+  //settings.drawSettings();
   //main.drawMain();
-  //background.drawBackground();
+  background.drawBackground();
   //instructions.drawInstructions();
   
-  /*if (rightDirection){
+  if (rightDirection){
       sumo.drawSumoR();
   }
   
@@ -89,7 +89,7 @@ void draw()
   
   if (upDirection){
       sumo.drawSumoU();
-  }*/
+  }
 }
 
 void keyPressed() 
