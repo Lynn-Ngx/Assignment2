@@ -2,7 +2,6 @@ class Sumo
 {
   void drawSumoL()
   {
-    System.out.println(moveX);
     translate(420, 250);
     scale(scale);
     stroke(0);
@@ -92,7 +91,6 @@ class Sumo
   
   void drawSumoU()
   {
-    System.out.println(moveX);
     translate(420, 250);
     scale(scale);
     stroke(0);

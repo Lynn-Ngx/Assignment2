@@ -25,6 +25,10 @@ boolean overBox = false;
 boolean overBox2 = false;
 boolean overBox3 = false;
 boolean locked = false;
+Boolean drawMain = true;
+Boolean drawPlay = false;
+Boolean drawInstructions = false;
+Boolean drawSettings = false;
 
 String a = "Settings";
 String a2 = "Music On";
@@ -71,10 +75,28 @@ void draw()
 {
   background(128, 216, 253);
   //settings.drawSettings();
-  //main.drawMain();
-  background.drawBackground();
-  //instructions.drawInstructions();
+  if(drawMain)
+  {
+    main.drawMain();
+  }
   
+  if(drawPlay)
+  {
+    background.drawBackground();
+  }
+  
+  if(drawInstructions)
+  {
+    instructions.drawInstructions();
+  }
+  
+  if(drawSettings)
+  {
+    settings.drawSettings();
+  }
+  //background.drawBackground();
+  //instructions.drawInstructions();
+  /*
   if (rightDirection){
       sumo.drawSumoR();
   }
@@ -89,9 +111,14 @@ void draw()
   
   if (upDirection){
       sumo.drawSumoU();
-  }
+  }*/
 }
 
+void mousePressed() {
+ main.mousePressed(); 
+}
+
+/*
 void keyPressed() 
 {
   if (keyCode == RIGHT)
@@ -130,7 +157,7 @@ void keyPressed()
     moveY = moveY - xSpeed; 
     scale = scale - scale1;
   }
-}
+}*/
 
 void stop()
 {

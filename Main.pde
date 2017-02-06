@@ -2,6 +2,7 @@ class Main
 {
   void drawMain()
   {
+    //System.out.println(locked);
     background(128, 216, 253);
     PFont f = createFont("Herculanum", 65);
     PFont f1 = createFont("Bradley Hand", 30);
@@ -98,6 +99,9 @@ class Main
          rect(220, 250, 200, 50, 5);
       } 
     } 
+    else {
+     overBox = false; 
+    }
     
     if (mouseX > 220 && mouseX < 220+boxWidth && 
     mouseY > 350 && mouseY < 350+boxHeight)
@@ -110,6 +114,9 @@ class Main
         rect(220, 350, 200, 50, 5);
       } 
     } 
+    else {
+     overBox2 = false; 
+    }
     
     if (mouseX > 220 && mouseX < 220+boxWidth && 
     mouseY > 450 && mouseY < 450+boxHeight)
@@ -121,15 +128,51 @@ class Main
         stroke(0);
         rect(220, 450, 200, 50, 5);
       } 
-    } 
+    }
   
     else {
       strokeWeight(1);
       stroke(0);
       fill(255);
-      overBox = false;
-      overBox2 = false;
       overBox3 = false;
+    }
+  }
+  
+  void mousePressed() 
+  {
+    System.out.println(overBox);
+    if(overBox) 
+    { 
+       locked = true;
+       drawMain = false;
+       drawPlay = true;
+       overBox = false;
+       locked = false;
+    }
+    
+    if(overBox2) 
+    { 
+       locked = true;
+       drawMain = false;
+       drawInstructions = true;
+       overBox2 = false;
+       locked = false;
+    }
+    
+    if(overBox3) 
+    { 
+       locked = true;
+       drawMain = false;
+       drawSettings = true;
+       overBox3 = false;
+       locked = false;
+    }
+    
+    else 
+    {
+       overBox = false;
+       overBox2 = false;
+       overBox3 = false;
     }
   }
 }
