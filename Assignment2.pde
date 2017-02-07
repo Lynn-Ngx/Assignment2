@@ -10,9 +10,10 @@ Main main;
 Score score;
 Instructions instructions;
 Settings settings;
+Enemies enemies;
 
-float scale = 0.4;
-float scale1 = 0.009;
+float scale1 = 0.4;
+float scale2 = 0.009;
 float moveX;
 float moveY;
 float xSpeed = 30;
@@ -46,6 +47,7 @@ Boolean overBox7 = false;
 Boolean overBox8 = false;
 Boolean locked1 = false;
 Boolean playing = true;
+Boolean fall = false;
 
 float boxWidth = 200;
 float boxHeight = 50;
@@ -65,11 +67,14 @@ String w4 = "Use the arrow keys to move your player";
 void setup()
 {
   size(650, 650); 
-  
-  //laoding the song
-  minim = new Minim(this);
-  player = minim.loadFile("Touch.mp3", 2048);
-  player.play();
+
+  if(playing == true)
+  {
+    //laoding the song
+    minim = new Minim(this);
+    player = minim.loadFile("Touch.mp3", 2048);
+    player.play();
+  }
   
   sumo = new Sumo();
   main = new Main();
@@ -77,6 +82,7 @@ void setup()
   score = new Score();
   instructions = new Instructions();
   settings = new Settings();
+  enemies = new Enemies();
 }
 
 void draw()
@@ -111,11 +117,6 @@ void mousePressed() {
  instructions.mousePressed();
  background.mousePressed();
 }
-
-//void keyPressed() {
- //sumo.keyPressed(); 
-//}
-
 
 void stop()
 {

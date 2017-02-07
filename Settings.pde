@@ -131,8 +131,8 @@ class Settings
     { 
        on = true;
        locked1 = true;
-       minim = new Minim(this);
-       player = minim.loadFile("Touch.mp3", 2048);
+       //minim = new Minim(this);
+       //player = minim.loadFile("Touch.mp3", 2048);
        player.play(); 
        playing = true;
        overBox4 = false;

@@ -2,9 +2,12 @@ class Sumo
 {
   void drawSumoL()
   {
+    if(fall ==  false)
+    {
+     System.out.println(fall);
     strokeWeight(1);
     translate(420, 250);
-    scale(scale);
+    scale(scale1);
     stroke(0);
     fill(254, 209, 146);
     rect(moveX + 320, 375 + moveY, 35, 20, 5);
@@ -29,13 +32,16 @@ class Sumo
     line(moveX + width/2 - 40, 320 + moveY,moveX + width/2 - 20 , 320 + moveY);
     fill(254, 209, 146);
     ellipse(moveX + width/2 - 10, height/2 + 10 + moveY, 30, 30);
+    }
   }
   
   void drawSumoR()
   {
+    if(fall ==  false)
+    {
     strokeWeight(1);
     translate(420, 250);
-    scale(scale);
+    scale(scale1);
     stroke(0);
     fill(254, 209, 146);
     rect(moveX + 320, 375 + moveY, 35, 20, 5);
@@ -60,13 +66,16 @@ class Sumo
     line(moveX + width/2 + 40, 320 + moveY, moveX + width/2 + 20 , 320 + moveY);
     fill(254, 209, 146);
     ellipse(moveX + width/2 + 10, height/2 + 10 + moveY, 30, 30);
+    }
   }
   
   void drawSumoD()
   {
+    if(fall ==  false)
+    {
     strokeWeight(1);
     translate(420, 250);
-    scale(scale);
+    scale(scale1);
     stroke(0);
     fill(254, 209, 146);
     ellipse(width/2 + moveX,moveY + height/2, 100, 100);
@@ -90,13 +99,16 @@ class Sumo
     fill(255, 0, 0);
     line(width/2 + 10 + moveX, moveY + height/2-5, width/2 + 30 + moveX,moveY + height/2-5);
     line(width/2 - 10 + moveX, moveY + height/2-5, width/2 - 30 + moveX,moveY +  height/2-5);
+    }
   }
   
   void drawSumoU()
   {
+    if(fall ==  false)
+    {
     strokeWeight(1);
     translate(420, 250);
-    scale(scale);
+    scale(scale1);
     stroke(0);
     fill(254, 209, 146);
     rect(width/2 - 25 + moveX,moveY + height/2 - 90, 50, 50, 10);
@@ -115,7 +127,17 @@ class Sumo
     fill(252, 13, 27);
     triangle(275 + moveX, moveY + 330, 325 + moveX,moveY +  375, 375 + moveX,moveY +  330);
   }
+  }
 }
+
+void Fall()
+  {
+    if (moveX < 95 && moveX > 95+470 && 
+    moveY < 315 && moveY > 315+180)
+    {
+      fall = true; 
+    }
+  }
 
 void keyPressed() 
 {
@@ -143,7 +165,7 @@ void keyPressed()
     upDirection = false;
     downDirection = true;
     moveY = moveY + xSpeed; 
-    scale = scale + scale1;
+    scale1 = scale1 + scale2;
   }
   
   if (keyCode == UP) 
@@ -153,6 +175,6 @@ void keyPressed()
     downDirection = false;
     upDirection = true;
     moveY = moveY - xSpeed; 
-    scale = scale - scale1;
+    scale1 = scale1 - scale2;
   }
 }

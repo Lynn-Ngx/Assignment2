@@ -42,6 +42,8 @@ class Background
     arc(83, 413, 30, 30, 0, PI+0.9);
     stroke(0); 
     ellipse(325, 400, 500, 200);
+    //noFill();
+    //rect(95, 315, 470, 180);
     PFont f1 = createFont("Bradley Hand", 30);
     textFont(f1);
     text(w5, 50, 625);
@@ -49,6 +51,7 @@ class Background
     noFill();
     rect(10, 590, 150, 50, 5);
     button();
+    //enemies.drawEnemiesR();
     
     if (rightDirection){
         sumo.drawSumoR();
@@ -65,7 +68,8 @@ class Background
     if (upDirection){
         sumo.drawSumoU();
     }
-    }
+  }
+    
     
     void button()
   {
