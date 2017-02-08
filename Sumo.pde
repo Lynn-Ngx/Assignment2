@@ -137,14 +137,22 @@ class Sumo
     if (!((moveX > 95 || moveX < -1170) ||
     (moveY < -210 || moveY > 315)))
     {
-      strokeWeight(3);
-      rect(95, 315, 470, 180);
+      //strokeWeight(3);
+      //rect(95, 315, 470, 180);
       fall = false;
+      rounds = false;
     }
     else
     {
       if (fall == false) {points ++;}
+      if (fall == false) {
+      rounds1 ++;
+          //rounds = false;
+        }
       fall = true;
+      rounds = true;
+      
+       
     }
   }
 

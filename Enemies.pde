@@ -140,14 +140,22 @@ class Enemies
     if (!((x1 > 1000 || x1 < -200) ||
     (y1 < -210 || y1 > 315)))
     {
-      strokeWeight(3);
-      rect(95, 315, 470, 180);
+      //strokeWeight(3);
+      //rect(95, 315, 470, 180);
       fall1 = false;
+      rounds = false;
     }
     else
     {
       if (fall1 == false) {points1 ++;}
+      if (fall1 == false) {
+        rounds1 ++;
+          //rounds = false;
+       }
+      rounds = true;
       fall1 = true;
+      
+   
     }
   }
 

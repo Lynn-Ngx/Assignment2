@@ -11,6 +11,7 @@ Score score;
 Instructions instructions;
 Settings settings;
 Enemies enemies;
+Over over;
 
 //float scale1 = 0.4;
 //float scale2 = 0.009;
@@ -50,6 +51,7 @@ String a = "Settings";
 String a2 = "Music On";
 String a3 = "Music Off";
 String w5 = "Back";
+String d1 = "Game Over";
 
 Boolean overBox4 = false;
 Boolean overBox5 = false;
@@ -60,6 +62,9 @@ Boolean locked1 = false;
 Boolean playing = true;
 Boolean fall = false;
 Boolean fall1 = false;
+Boolean rounds = false;
+
+int rounds1;
 
 float boxWidth = 200;
 float boxHeight = 50;
@@ -70,7 +75,7 @@ String s2 = "Instructions";
 String s3 = "Settings";
 String q = "PLAYER 1: " + points1;
 String q2 = "PLAYER 2: " + points;
-String q3 = "ROUNDS: ";
+String q3 = "ROUNDS: " + rounds1;
 String w = "Instructions";
 String w2 = "Control your character and attempt to";
 String w3 = "bump the othetr players off of the sides";
@@ -101,6 +106,7 @@ void setup()
   instructions = new Instructions();
   settings = new Settings();
   enemies = new Enemies();
+  over = new Over();
 
   for (int i = 0; i < numBalls; i++) {
     balls[i] = new Ball(random(width), random(height), random(30, 70), i, balls);
@@ -109,6 +115,7 @@ void setup()
 
 void draw()
 {
+  q3 = "ROUNDS: " + rounds1;
   q = "PLAYER 1: " + points1;
   q2 = "PLAYER 2: " + points;
   background(128, 216, 253);
@@ -131,6 +138,11 @@ void draw()
   if(drawSettings)
   {
     settings.drawSettings();
+  }
+  
+  if(rounds1 == 1)
+  {
+    over.drawOver();
   }
 }
 
