@@ -59,8 +59,8 @@ class Ball {
   
  void display() {
    // ellipse(moveX, moveY, diameter, diameter);
-    ellipse(x + loc.x + width/2, y + loc.y + height/2+10, 100 + diameter, 100 + diameter);
-    ellipse(width/2 + moveX + x, height/2+10 + moveY + y, 100 + diameter, 100 + diameter);
+    //ellipse(x + loc.x + width/2, y + loc.y + height/2+10, 100 + diameter, 100 + diameter);
+    //ellipse(width/2 + moveX + x, height/2+10 + moveY + y, 100 + diameter, 100 + diameter);
     //ellipse(x, y, diameter, diameter);
     //sumo.drawSumoL();
     //enemies.drawEnemies();

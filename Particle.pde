@@ -26,7 +26,7 @@ class Particle{
   
   //method to render the particle. control how it looks here!
   void display(){
-    enemies.drawEnemiesL();
+    //enemies.drawEnemiesL();
     //ellipseMode(CENTER);
     //fill(d, 0, 255);
     //ellipse(loc.x, loc.y, sz, sz);

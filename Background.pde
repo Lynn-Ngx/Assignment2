@@ -54,34 +54,59 @@ class Background
     button();
     //sumo.fall();
     //enemies.drawEnemiesR();
+
     
     if (rightDirection){
         sumo.drawSumoR();
+        //enemies.drawEnemiesR();
     }
     
     if (leftDirection){
         sumo.drawSumoL();
+        //enemies.drawEnemiesL();
     }
     
     if (downDirection){
         sumo.drawSumoD();
+        //enemies.drawEnemiesD();
     }
     
     if (upDirection){
         sumo.drawSumoU();
+        //enemies.drawEnemiesU();
+    }
+    
+    if (rightDirection2){
+        //sumo.drawSumoR();
+        enemies.drawEnemiesR();
+    }
+    
+    if (leftDirection2){
+        //sumo.drawSumoL();
+        enemies.drawEnemiesL();
+    }
+    
+    if (downDirection2){
+        //sumo.drawSumoD();
+        enemies.drawEnemiesD();
+    }
+    
+    if (upDirection2){
+        //sumo.drawSumoU();
+        enemies.drawEnemiesU();
     }
     
     for (Ball ball : balls) {
     ball.collide();
     //ball.move();
     ball.display();  
-  }
+    }
   
-    for(int i=0; i<particle.length; i++){
-  particle[i].run(moveX+100, moveY); 
+    //for(int i=0; i<particle.length; i++){
+  //particle[i].run(moveX+100, moveY); 
   //run() method takes two arguments - x and y values to apply forces to //wut
   }
-  }
+  
    
     void button()
   {
@@ -105,6 +130,7 @@ class Background
       overBox8 = false;
     }
   }
+
   
 
   

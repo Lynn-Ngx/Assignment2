@@ -12,12 +12,14 @@ Instructions instructions;
 Settings settings;
 Enemies enemies;
 
-float scale1 = 0.4;
-float scale2 = 0.009;
+//float scale1 = 0.4;
+//float scale2 = 0.009;
 float moveX;
 float moveY;
 float x;
 float y;
+float x1;
+float y1;
 float diameter;
 float xSpeed = 30;
 
@@ -25,6 +27,10 @@ boolean leftDirection = true;
 boolean rightDirection;
 boolean downDirection;
 boolean upDirection;
+boolean leftDirection2;
+boolean rightDirection2 = true;
+boolean downDirection2;
+boolean upDirection2;
 boolean overBox = false;
 boolean overBox2 = false;
 boolean overBox3 = false;
@@ -59,8 +65,8 @@ String s = "Super Sumo";
 String s1 = "Play";
 String s2 = "Instructions";
 String s3 = "Settings";
-String q = "PLAYER WINS: ";
-String q2 = "COMPUTER WINS: ";
+String q = "PLAYER 1: ";
+String q2 = "PLAYER 2: ";
 String q3 = "ROUNDS: ";
 String w = "Instructions";
 String w2 = "Control your character and attempt to";
@@ -133,7 +139,12 @@ void mousePressed() {
  main.mousePressed(); 
  settings.mousePressed();
  instructions.mousePressed();
- background.mousePressed();
+ background.mousePressed(); 
+}
+
+void keyPressed() {
+  sumo.keyPressed();
+  enemies.keyPressed();
 }
 
 void stop()

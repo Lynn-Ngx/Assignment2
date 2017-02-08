@@ -2,11 +2,11 @@ class Sumo
 {
   void drawSumoL()
   {
-    if(fall ==  false)
-    {
+    //if(fall ==  false)
+    //{
     strokeWeight(1);
     translate(420, 250);
-    scale(scale1);
+    scale(0.4);
     stroke(0);
     fill(254, 209, 146);
     rect(320 + moveX, 375 + moveY, 35, 20, 5);
@@ -31,16 +31,16 @@ class Sumo
     line(width/2 - 40 + moveX, 320 + moveY,width/2 - 20 + moveX, 320 + moveY);
     fill(254, 209, 146);
     ellipse(width/2 - 10 + moveX, height/2 + 10 + moveY, 30, 30);
-    }
+    //}
   }
   
   void drawSumoR()
   {
-    if(fall ==  false)
-    {
+    //if(fall ==  false)
+    //{
     strokeWeight(1);
     translate(420, 250);
-    scale(scale1);
+    scale(0.4);
     stroke(0);
     fill(254, 209, 146);
     rect(320 + moveX, 375 + moveY, 35, 20, 5);
@@ -65,16 +65,16 @@ class Sumo
     line(width/2 + 40 + moveX, 320 + moveY, width/2 + 20 + moveX, 320 + moveY);
     fill(254, 209, 146);
     ellipse(width/2 + 10 + moveX, height/2 + 10 + moveY, 30, 30);
-    }
+    //}
   }
   
   void drawSumoD()
   {
-    if(fall ==  false)
-    {
+    //if(fall ==  false)
+    //{
     strokeWeight(1);
     translate(420, 250);
-    scale(scale1);
+    scale(0.4);
     stroke(0);
     fill(254, 209, 146);
     ellipse(width/2 + moveX,height/2 + moveY, 100, 100);
@@ -98,16 +98,16 @@ class Sumo
     fill(255, 0, 0);
     line(width/2 + 10 + moveX, height/2-5 + moveY, width/2 + 30 + moveX,height/2-5 + moveY);
     line(width/2 - 10 + moveX, height/2-5 + moveY, width/2 - 30 + moveX, height/2-5 + moveY);
-    }
+    //}
   }
   
   void drawSumoU()
   {
-    if(fall ==  false)
-    {
+    //if(fall ==  false)
+    //{
     strokeWeight(1);
     translate(420, 250);
-    scale(scale1);
+    scale(0.4);
     stroke(0);
     fill(254, 209, 146);
     rect(width/2 - 25 + moveX,height/2 - 90 + moveY, 50, 50, 10);
@@ -125,8 +125,8 @@ class Sumo
     stroke(0);
     fill(252, 13, 27);
     triangle(275 + moveX, 330 + moveY, 325 + moveX, 375 + moveY, 375 + moveX, 330 + moveY);
+  //}
   }
-}
   
   /* void fall()
   {
@@ -161,44 +161,44 @@ class Sumo
       fall = true;
     }
   }*/
-}
 
-void keyPressed() 
-{
-  if (keyCode == RIGHT)
+  void keyPressed() 
   {
-    rightDirection = true;
-    leftDirection = false;
-    downDirection = false;
-    moveX = moveX + xSpeed;
-  } 
-  
-  if (keyCode == LEFT) 
-  {
-    rightDirection = false;
-    leftDirection = true;
-    upDirection = false;
-    downDirection = false;
-    moveX = moveX - xSpeed;  
-  }
-  
-  if (keyCode == DOWN) 
-  {
-    rightDirection = false;
-    leftDirection = false;
-    upDirection = false;
-    downDirection = true;
-    moveY = moveY + xSpeed; 
-    scale1 = scale1 + scale2;
-  }
-  
-  if (keyCode == UP) 
-  {
-    rightDirection = false;
-    leftDirection = false;
-    downDirection = false;
-    upDirection = true;
-    moveY = moveY - xSpeed; 
-    scale1 = scale1 - scale2;
+    if (keyCode == RIGHT)
+    {
+      rightDirection = true;
+      leftDirection = false;
+      downDirection = false;
+      moveX = moveX + xSpeed;
+    } 
+    
+    if (keyCode == LEFT) 
+    {
+      rightDirection = false;
+      leftDirection = true;
+      upDirection = false;
+      downDirection = false;
+      moveX = moveX - xSpeed;  
+    }
+    
+    if (keyCode == DOWN) 
+    {
+      rightDirection = false;
+      leftDirection = false;
+      upDirection = false;
+      downDirection = true;
+      moveY = moveY + xSpeed; 
+      //scale1 = scale1 + scale2;
+    }
+    
+    if (keyCode == UP) 
+    {
+      rightDirection = false;
+      leftDirection = false;
+      downDirection = false;
+      upDirection = true;
+      moveY = moveY - xSpeed; 
+      //scale1 = scale1 - scale2;
+    }
   }
 }
