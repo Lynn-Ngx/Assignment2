@@ -9,5 +9,6 @@ class Score
     text(q, 20, 25);
     text(q2, 20, 65);
     text(q3, 470, 25);
+
   }
 }

@@ -35,10 +35,10 @@ class Ball {
     }   
   }
   
-  /*void move() {
-    vy += gravity;
+  void move() {
+    //vx += gravity;
     x += vx;
-    y += vy;
+    //y += vy;
     if (x + diameter/2 > width) {
       x = width - diameter/2;
       vx *= friction; 
@@ -47,22 +47,21 @@ class Ball {
       x = diameter/2;
       vx *= friction;
     }
-    if (y + diameter/2 > height) {
-      y = height - diameter/2;
-      vy *= friction; 
-    } 
-    else if (y - diameter/2 < 0) {
-      y = diameter/2;
-      vy *= friction;
-    }
-  }*/
+    //if (y + diameter/2 > height) {
+      //y = height - diameter/2;
+      //vy *= friction; 
+    //} 
+    //else if (y - diameter/2 < 0) {
+      //y = diameter/2;
+      //vy *= friction;
+    //}
+  }
   
  void display() {
-   // ellipse(moveX, moveY, diameter, diameter);
-    //ellipse(x + loc.x + width/2, y + loc.y + height/2+10, 100 + diameter, 100 + diameter);
+   // ellipse(moveX, moveY, diameter, 100 + diameter);
     //ellipse(width/2 + moveX + x, height/2+10 + moveY + y, 100 + diameter, 100 + diameter);
     //ellipse(x, y, diameter, diameter);
     //sumo.drawSumoL();
-    //enemies.drawEnemies();
+    //enemies.drawEnemiesR();
   }  
 }

@@ -22,6 +22,8 @@ float x1;
 float y1;
 float diameter;
 float xSpeed = 30;
+int points;
+int points1;
 
 boolean leftDirection = true;
 boolean rightDirection;
@@ -57,6 +59,7 @@ Boolean overBox8 = false;
 Boolean locked1 = false;
 Boolean playing = true;
 Boolean fall = false;
+Boolean fall1 = false;
 
 float boxWidth = 200;
 float boxHeight = 50;
@@ -65,21 +68,18 @@ String s = "Super Sumo";
 String s1 = "Play";
 String s2 = "Instructions";
 String s3 = "Settings";
-String q = "PLAYER 1: ";
-String q2 = "PLAYER 2: ";
+String q = "PLAYER 1: " + points1;
+String q2 = "PLAYER 2: " + points;
 String q3 = "ROUNDS: ";
 String w = "Instructions";
 String w2 = "Control your character and attempt to";
 String w3 = "bump the othetr players off of the sides";
 String w4 = "Use the arrow keys to move your player";
 
-int num = 1; //how many particles we'll have in the system. More particles = slower sketch.
-PVector loc; //location vector
-
-Particle[] particle = new Particle[num]; //Initialise array of particles of length "num"
-
 int numBalls = 1;
 float spring = 1;
+float gravity = 0.03;
+float friction = -0.9;
 Ball[] balls = new Ball[numBalls];
 
 void setup()
@@ -101,10 +101,7 @@ void setup()
   instructions = new Instructions();
   settings = new Settings();
   enemies = new Enemies();
-  
-  for(int i=0; i<particle.length; i++){
-  particle[i] = new Particle(new PVector(random(0, width), random(0, height)), 2, 10, 10);} //wut
-  
+
   for (int i = 0; i < numBalls; i++) {
     balls[i] = new Ball(random(width), random(height), random(30, 70), i, balls);
   }
@@ -112,6 +109,8 @@ void setup()
 
 void draw()
 {
+  q = "PLAYER 1: " + points1;
+  q2 = "PLAYER 2: " + points;
   background(128, 216, 253);
 
   if(drawMain)

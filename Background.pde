@@ -42,9 +42,9 @@ class Background
     arc(83, 413, 30, 30, 0, PI+0.9);
     stroke(0); 
     ellipse(325, 400, 500, 200);
-    //stroke(255);
-    //noFill();
-    //rect(95, 315, 470, 180);
+    stroke(255);
+    noFill();
+    rect(95, 315, 470, 180);
     PFont f1 = createFont("Bradley Hand", 30);
     textFont(f1);
     text(w5, 50, 625);
@@ -52,7 +52,8 @@ class Background
     noFill();
     rect(10, 590, 150, 50, 5);
     button();
-    //sumo.fall();
+    enemies.fall();
+    sumo.fall();
     //enemies.drawEnemiesR();
 
     
@@ -71,7 +72,7 @@ class Background
         //enemies.drawEnemiesD();
     }
     
-    else if (upDirection){
+    if (upDirection){
         sumo.drawSumoU();
         //enemies.drawEnemiesU();
     }
@@ -91,14 +92,14 @@ class Background
         enemies.drawEnemiesD();
     }
     
-    else if (upDirection2){
+    if (upDirection2){
         //sumo.drawSumoU();
         enemies.drawEnemiesU();
     }
     
     for (Ball ball : balls) {
     ball.collide();
-    //ball.move();
+    ball.move();
     ball.display();  
     }
   

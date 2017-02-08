@@ -2,8 +2,8 @@ class Sumo
 {
   void drawSumoL()
   {
-    //if(fall ==  false)
-    //{
+    if(fall ==  false)
+    {
     strokeWeight(1);
     translate(420, 250);
     scale(0.4);
@@ -31,13 +31,17 @@ class Sumo
     line(width/2 - 40 + moveX, 320 + moveY,width/2 - 20 + moveX, 320 + moveY);
     fill(254, 209, 146);
     ellipse(width/2 - 10 + moveX, height/2 + 10 + moveY, 30, 30);
-    //}
+    }
+    for (Ball ball : balls) {
+    ball.collide();
+    ball.move();
+    ball.display();  }
   }
   
   void drawSumoR()
   {
-    //if(fall ==  false)
-    //{
+    if(fall ==  false)
+    {
     strokeWeight(1);
     translate(420, 250);
     scale(0.4);
@@ -65,13 +69,13 @@ class Sumo
     line(width/2 + 40 + moveX, 320 + moveY, width/2 + 20 + moveX, 320 + moveY);
     fill(254, 209, 146);
     ellipse(width/2 + 10 + moveX, height/2 + 10 + moveY, 30, 30);
-    //}
+    }
   }
   
   void drawSumoD()
   {
-    //if(fall ==  false)
-    //{
+    if(fall ==  false)
+    {
     strokeWeight(1);
     translate(420, 250);
     scale(0.4);
@@ -98,13 +102,13 @@ class Sumo
     fill(255, 0, 0);
     line(width/2 + 10 + moveX, height/2-5 + moveY, width/2 + 30 + moveX,height/2-5 + moveY);
     line(width/2 - 10 + moveX, height/2-5 + moveY, width/2 - 30 + moveX, height/2-5 + moveY);
-    //}
+    }
   }
   
   void drawSumoU()
   {
-    //if(fall ==  false)
-    //{
+    if(fall ==  false)
+    {
     strokeWeight(1);
     translate(420, 250);
     scale(0.4);
@@ -125,42 +129,24 @@ class Sumo
     stroke(0);
     fill(252, 13, 27);
     triangle(275 + moveX, 330 + moveY, 325 + moveX, 375 + moveY, 375 + moveX, 330 + moveY);
-  //}
   }
-  
-  /* void fall()
-  {
-     System.out.println(fall);
-    if (moveX > 95 && moveX < 95+470 && 
-    moveY > 315 && moveY < 315+180)
-    {
-      strokeWeight(3);
-      rect(95, 315, 470, 180);
-      fall = false;
-    }
-    
-    else
-    {
-      fall = true;
-    }
   }
   
   void fall()
   {
-     System.out.println(fall);
-    if (mouseX > 95 && mouseX < 95+470 && 
-    mouseY > 315 && mouseY < 315+180)
+    if (!((moveX > 95 || moveX < -1170) ||
+    (moveY < -210 || moveY > 315)))
     {
       strokeWeight(3);
       rect(95, 315, 470, 180);
       fall = false;
     }
-    
     else
     {
+      if (fall == false) {points ++;}
       fall = true;
     }
-  }*/
+  }
 
   void keyPressed() 
   {
