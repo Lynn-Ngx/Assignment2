@@ -12,10 +12,14 @@ Instructions instructions;
 Settings settings;
 Enemies enemies;
 
+Boolean k = false;
+
 float scale1 = 0.4;
 float scale2 = 0.009;
 float moveX;
 float moveY;
+float x;
+float y;
 float xSpeed = 30;
 
 boolean leftDirection = true;
@@ -69,6 +73,10 @@ PVector loc; //location vector
 
 Particle[] particle = new Particle[num]; //Initialise array of particles of length "num"
 
+int numBalls = 1;
+float spring = 1;
+Ball[] balls = new Ball[numBalls];
+
 void setup()
 {
   size(650, 650); 
@@ -88,8 +96,13 @@ void setup()
   instructions = new Instructions();
   settings = new Settings();
   enemies = new Enemies();
+  
   for(int i=0; i<particle.length; i++){
-  particle[i] = new Particle(new PVector(random(0, width), random(0, height)), 2, 10, 10);}
+  particle[i] = new Particle(new PVector(random(0, width), random(0, height)), 2, 10, 10);} //wut
+  
+  for (int i = 0; i < numBalls; i++) {
+    balls[i] = new Ball(random(width), random(height), random(30, 70), i, balls);
+  }
 }
 
 void draw()

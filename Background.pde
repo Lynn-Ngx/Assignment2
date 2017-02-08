@@ -2,6 +2,7 @@ class Background
 {
   void drawBackground()
   {
+    System.out.println(k);
     score.drawScore();
     strokeWeight(1);
     fill(27, 169, 210);
@@ -70,10 +71,10 @@ class Background
     if (upDirection){
         sumo.drawSumoU();
     }
-    
+  
     for(int i=0; i<particle.length; i++){
   particle[i].run(moveX+100, moveY); 
-  //run() method takes two arguments - x and y values to apply forces to
+  //run() method takes two arguments - x and y values to apply forces to //wut
   }
   }
    
@@ -99,6 +100,8 @@ class Background
       overBox8 = false;
     }
   }
+  
+
   
   void mousePressed() 
   {
