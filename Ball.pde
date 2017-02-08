@@ -47,14 +47,7 @@ class Ball {
       x = diameter/2;
       vx *= friction;
     }
-    //if (y + diameter/2 > height) {
-      //y = height - diameter/2;
-      //vy *= friction; 
-    //} 
-    //else if (y - diameter/2 < 0) {
-      //y = diameter/2;
-      //vy *= friction;
-    //}
+
   }
   
  void display() {

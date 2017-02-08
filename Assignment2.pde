@@ -81,6 +81,10 @@ String w2 = "Control your character and attempt to";
 String w3 = "bump the othetr players off of the sides";
 String w4 = "Use the arrow keys to move your player";
 
+float ball_dir = 1;
+float ball_size = 50;  // Radius
+float dy = 0;  // Direction
+
 int numBalls = 1;
 float spring = 1;
 float gravity = 0.03;
@@ -140,7 +144,7 @@ void draw()
     settings.drawSettings();
   }
   
-  if(rounds1 == 5)
+  if(rounds1 == 3)
   {
     over.drawOver();
   }

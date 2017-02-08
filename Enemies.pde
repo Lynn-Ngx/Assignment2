@@ -3,7 +3,9 @@ class Enemies
   void drawEnemiesL()
   {
     if(fall1 ==  false)
-    {
+    { 
+    x1 += ball_dir * 1.0;
+    y1 += dy;
     strokeWeight(1);
     translate(-1000, 10);
     //scale(0.5);
@@ -37,6 +39,8 @@ class Enemies
   
   void drawEnemiesR()
   {
+    x1 += ball_dir * 1.0;
+    y1 += dy;
     if(fall1 ==  false)
     {
     strokeWeight(1);
@@ -76,6 +80,8 @@ class Enemies
   
   void drawEnemiesD()
   {
+    x1 += ball_dir * 1.0;
+    y1 += dy;
     if(fall1 ==  false)
     {
     strokeWeight(1);
@@ -109,6 +115,8 @@ class Enemies
   
   void drawEnemiesU()
   {
+    x1 += ball_dir * 1.0;
+    y1 += dy;
     if(fall1 ==  false)
     {
     strokeWeight(1);
