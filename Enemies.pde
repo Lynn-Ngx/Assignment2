@@ -31,12 +31,6 @@ class Enemies
     line(x1 + width/2 - 40, y1 + 320,x1 +  width/2 - 20 , y1 + 320);
     fill(254, 209, 146);
     ellipse(x1 + width/2 - 10,y1 +  height/2 + 10, 30, 30);
-    
-     // If ball hits paddle or back wall, reverse direction
-
-    if(x < 50 && ball_dir == -1) {
-
-    ball_dir *= -1;}
 
     }
   }
@@ -74,12 +68,7 @@ class Enemies
     line(width/2 + 40 + x1, 320 + y1, width/2 + 20 + x1, 320 + y1);
     fill(254, 209, 146);
     ellipse(width/2 + 10 + x1, height/2 + 10 + y1, 30, 30);
-    
-    if(x < 50 && ball_dir == -1) {
-
-    ball_dir *= -1;}
     }
-    
     for (Ball ball : balls) {
     ball.collide();
     ball.move();
@@ -88,8 +77,7 @@ class Enemies
   
   void drawEnemiesD()
   {
-    x += ball_dir * 1.0;
-    y += dy;
+ 
     if(fall1 ==  false)
     {
     strokeWeight(1);
@@ -118,10 +106,7 @@ class Enemies
     fill(255, 0, 0);
     line(width/2 + 10 + x1, height/2-5 + y1, width/2 + 30 + x1,height/2-5 + y1);
     line(width/2 - 10 + x1, height/2-5 + y1, width/2 - 30 + x1, height/2-5 + y1);
-    
-    if(x < 50 && ball_dir == -1) {
 
-    ball_dir *= -1;}
     }
   }
   
@@ -150,9 +135,6 @@ class Enemies
     stroke(0);
     fill(0, 119, 0);;
     triangle(275 + x1, 330 + y1, 325 + x1, 375 + y1, 375 + x1, 330 + y1);
-    if(x < 50 && ball_dir == -1) {
-
-    ball_dir *= -1;}
     }
     
   }
