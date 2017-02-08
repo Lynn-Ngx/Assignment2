@@ -57,41 +57,33 @@ class Background
        
     if (rightDirection){
         sumo.drawSumoR();
-        //enemies.drawEnemiesR();
     }
     
     if (leftDirection){
         sumo.drawSumoL();
-        //enemies.drawEnemiesL();
     }
     
     if (downDirection){
         sumo.drawSumoD();
-        //enemies.drawEnemiesD();
     }
     
     if (upDirection){
         sumo.drawSumoU();
-        //enemies.drawEnemiesU();
     }
     
     if (rightDirection2){
-        //sumo.drawSumoR();
         enemies.drawEnemiesR();
     }
     
     if (leftDirection2){
-        //sumo.drawSumoL();
         enemies.drawEnemiesL();
     }
     
     if (downDirection2){
-        //sumo.drawSumoD();
         enemies.drawEnemiesD();
     }
     
     if (upDirection2){
-        //sumo.drawSumoU();
         enemies.drawEnemiesU();
     }
     
@@ -100,13 +92,8 @@ class Background
     ball.move();
     ball.display();  
     }
-  
-    //for(int i=0; i<particle.length; i++){
-  //particle[i].run(moveX+100, moveY); 
-  //run() method takes two arguments - x and y values to apply forces to //wut
   }
   
-   
     void button()
   {
     // Test if the cursor is over the box 
@@ -129,9 +116,6 @@ class Background
       overBox8 = false;
     }
   }
-
-  
-
   
   void mousePressed() 
   {

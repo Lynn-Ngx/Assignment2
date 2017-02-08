@@ -137,8 +137,6 @@ class Sumo
     if (!((moveX > 95 || moveX < -1170) ||
     (moveY < -210 || moveY > 315)))
     {
-      //strokeWeight(3);
-      //rect(95, 315, 470, 180);
       fall = false;
       rounds = false;
     }
@@ -147,7 +145,6 @@ class Sumo
       if (fall == false) {points ++;}
       if (fall == false) {
       rounds1 ++;
-          //rounds = false;
         }
       fall = true;
       rounds = true;
@@ -182,7 +179,6 @@ class Sumo
       upDirection = false;
       downDirection = true;
       moveY = moveY + xSpeed; 
-      //scale1 = scale1 + scale2;
     }
     
     if (keyCode == UP) 
@@ -192,12 +188,6 @@ class Sumo
       downDirection = false;
       upDirection = true;
       moveY = moveY - xSpeed; 
-      //scale1 = scale1 - scale2;
     }
-    
-    for (Ball ball : balls) {
-    ball.collide();
-    //ball.move();
-    ball.display();  }
-  }
+    }
 }
