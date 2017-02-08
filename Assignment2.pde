@@ -64,6 +64,11 @@ String w2 = "Control your character and attempt to";
 String w3 = "bump the othetr players off of the sides";
 String w4 = "Use the arrow keys to move your player";
 
+int num = 1; //how many particles we'll have in the system. More particles = slower sketch.
+PVector loc; //location vector
+
+Particle[] particle = new Particle[num]; //Initialise array of particles of length "num"
+
 void setup()
 {
   size(650, 650); 
@@ -83,6 +88,8 @@ void setup()
   instructions = new Instructions();
   settings = new Settings();
   enemies = new Enemies();
+  for(int i=0; i<particle.length; i++){
+  particle[i] = new Particle(new PVector(random(0, width), random(0, height)), 2, 10, 10);}
 }
 
 void draw()
@@ -108,7 +115,6 @@ void draw()
   {
     settings.drawSettings();
   }
-  
 }
 
 void mousePressed() {

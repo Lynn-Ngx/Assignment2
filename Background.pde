@@ -42,6 +42,7 @@ class Background
     arc(83, 413, 30, 30, 0, PI+0.9);
     stroke(0); 
     ellipse(325, 400, 500, 200);
+    //stroke(255);
     //noFill();
     //rect(95, 315, 470, 180);
     PFont f1 = createFont("Bradley Hand", 30);
@@ -51,6 +52,7 @@ class Background
     noFill();
     rect(10, 590, 150, 50, 5);
     button();
+    //sumo.fall();
     //enemies.drawEnemiesR();
     
     if (rightDirection){
@@ -68,9 +70,13 @@ class Background
     if (upDirection){
         sumo.drawSumoU();
     }
+    
+    for(int i=0; i<particle.length; i++){
+  particle[i].run(moveX+100, moveY); 
+  //run() method takes two arguments - x and y values to apply forces to
   }
-    
-    
+  }
+   
     void button()
   {
     // Test if the cursor is over the box 
