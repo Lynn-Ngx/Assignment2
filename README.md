@@ -6,3 +6,5 @@ For my second assignment, I made a little sumo game. The main page has three opt
 The game page is two sumos going against each other. The idea of the game is to knock the other player out of the ring. Player one uses the arrow keys to move and Player two uses the 'W' 'A' 'S' 'D' keys to move. There are five rounds to the game. The player gets a score if the other player is knocked out of the ring. 
 
 The game ends after five rounds. You have an option to click back for each page.
+
+Link to my YouTube video: https://www.youtube.com/watch?v=47qERQQJmCs&feature=youtu.be
