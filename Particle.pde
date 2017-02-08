@@ -64,4 +64,30 @@ class Particle{
     acc.add(force);
   }
   
+  //method to update the location of the particle, and keep its velocity within a set limit
+  void update(){
+    vel.add(acc);
+    vel.limit(velocityLimit);
+    loc.add(vel);
+    acc.mult(0);
+  }
   
+  //method to bounce particles of canvas edges
+/*  void bounds(){
+    if(loc.y > height || loc.y < 0){
+      vel.y *= -1;
+    }
+    if(loc.x > width || loc.x < 0){
+      vel.x *= -1;
+    }
+  }*/
+  
+  //main method that combines all previous methods, and takes two arguments
+  //tx and ty are inherited from forces(), and set the attractive/repulsive co-ords
+  void run(float tx, float ty){
+    forces(tx, ty);
+    display();
+    //bounds();
+    update();
+  }
+}
