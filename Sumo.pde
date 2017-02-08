@@ -10,7 +10,7 @@ class Sumo
     stroke(0);
     fill(254, 209, 146);
     rect(320 + moveX, 375 + moveY, 35, 20, 5);
-    ellipse(width/2 + moveX + x, height/2+10 + moveY + y, 100, 100);
+    ellipse(width/2 + moveX + x, height/2+10 + moveY + y, 100 + diameter, 100 + diameter);
     stroke(0);
     fill(252, 13, 27);
     arc(width/2 + moveX, height/2 + 15 + moveY, 95, 95, 0 + 1.5, PI);

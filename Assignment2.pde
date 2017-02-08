@@ -12,14 +12,13 @@ Instructions instructions;
 Settings settings;
 Enemies enemies;
 
-Boolean k = false;
-
 float scale1 = 0.4;
 float scale2 = 0.009;
 float moveX;
 float moveY;
 float x;
 float y;
+float diameter;
 float xSpeed = 30;
 
 boolean leftDirection = true;

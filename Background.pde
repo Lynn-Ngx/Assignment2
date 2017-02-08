@@ -2,7 +2,6 @@ class Background
 {
   void drawBackground()
   {
-    System.out.println(k);
     score.drawScore();
     strokeWeight(1);
     fill(27, 169, 210);
@@ -71,6 +70,12 @@ class Background
     if (upDirection){
         sumo.drawSumoU();
     }
+    
+    for (Ball ball : balls) {
+    ball.collide();
+    //ball.move();
+    ball.display();  
+  }
   
     for(int i=0; i<particle.length; i++){
   particle[i].run(moveX+100, moveY); 

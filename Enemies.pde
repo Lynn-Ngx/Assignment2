@@ -8,7 +8,7 @@ class Enemies
     stroke(0);
     fill(254, 209, 146);
     rect(loc.x + 320,loc.y +  375  , 35, 20, 5);
-    ellipse(x + loc.x + width/2, y + loc.y + height/2+10, 100, 100);
+    ellipse(x + loc.x + width/2, y + loc.y + height/2+10, 100 + diameter, 100 + diameter);
     stroke(0);
     fill(0, 119, 0);
     arc(loc.x + width/2,loc.y +  height/2 + 15, 95, 95, 0 + 1.5, PI);
