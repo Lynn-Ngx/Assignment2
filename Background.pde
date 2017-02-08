@@ -71,7 +71,7 @@ class Background
         //enemies.drawEnemiesD();
     }
     
-    if (upDirection){
+    else if (upDirection){
         sumo.drawSumoU();
         //enemies.drawEnemiesU();
     }
@@ -91,7 +91,7 @@ class Background
         enemies.drawEnemiesD();
     }
     
-    if (upDirection2){
+    else if (upDirection2){
         //sumo.drawSumoU();
         enemies.drawEnemiesU();
     }

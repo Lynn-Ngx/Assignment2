@@ -200,5 +200,10 @@ class Sumo
       moveY = moveY - xSpeed; 
       //scale1 = scale1 - scale2;
     }
+    
+    for (Ball ball : balls) {
+    ball.collide();
+    //ball.move();
+    ball.display();  }
   }
 }

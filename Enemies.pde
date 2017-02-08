@@ -3,7 +3,7 @@ class Enemies
   void drawEnemiesL()
   {
     strokeWeight(1);
-    translate(100, 10);
+    translate(-1000, 10);
     //scale(0.5);
     stroke(0);
     fill(254, 209, 146);
@@ -33,87 +33,95 @@ class Enemies
   
   void drawEnemiesR()
   {
+    //if(fall ==  false)
+    //{
     strokeWeight(1);
     translate(-1000, 10);
-    //scale(1);
+    //scale(0.4);
     stroke(0);
     fill(254, 209, 146);
-    rect(320, 375  , 35, 20, 5);
-    ellipse(  width/2, height/2+10, 100, 100);
+    rect(320 + x1, 375 + y1, 35, 20, 5);
+    ellipse(width/2 + x1 + x, height/2+10 + y1 +y, 100 + diameter, 100 + diameter);
     stroke(0);
     fill(0, 119, 0);
-    arc(width/2 + 2, height/2 + 15  , 95, 95, 0 , PI-1.55);
+    arc(width/2 + 2 + x1, height/2 + 15 + y1, 95, 95, 0 , PI-1.55);
     stroke(0);
     fill(254, 209, 146);
-    rect(300, 370  , 35, 20, 5);
-    rect(width/2 - 25, height/2 - 80  , 50, 50, 10);
+    rect(300 + x1, 370 + y1, 35, 20, 5);
+    rect(width/2 - 25 + x1, height/2 - 80 + y1, 50, 50, 10);
     fill(0);
-    line(width/2 + 25, 280  ,   width/2 + 10, 280);
-    line(width/2 + 25, 264  ,   width/2 + 15, 264);
-    rect(width/2 - 20, height/2 - 95  , 20, 20, 5);
-    arc(width/2, height/2 - 80  , 40, 40, 0, PI);
-    arc(width/2 - 25, height/2 - 65  , 45, 30, 0 + 4.7, PI+4.7);
+    line(width/2 + 25 + x1, 280 + y1, width/2 + 10 + x1, 280 + y1);
+    line(width/2 + 25 + x1, 264 + y1, width/2 + 15 + x1, 264 + y1);
+    rect(width/2 - 20 + x1, height/2 - 95 + y1, 20, 20, 5);
+    arc(width/2 + x1, height/2 - 80 + y1, 40, 40, 0, PI);
+    arc(width/2 - 25 + x1, height/2 - 65 + y1, 45, 30, 0 + 4.7, PI+4.7);
     stroke(253, 153, 51);
-    line(width/2 - 25, height/2 - 100  ,  width/2 - 5, height/2 - 85);
+    line(width/2 - 25 + x1, height/2 - 100 + y1,width/2 - 5 + x1, height/2 - 85 + y1);
     stroke(0);
-    line(width/2 - 49, 340 , width/2 +50, 340);
-    line(width/2 + 40, 320 , width/2 + 20 , 320);
+    line(width/2 - 49 + x1, 340 + y1, width/2 +50 + x1, 340 + y1);
+    line(width/2 + 40 + x1, 320 + y1, width/2 + 20 + x1, 320 + y1);
     fill(254, 209, 146);
-    ellipse(width/2 + 10, height/2 + 10  , 30, 30);
+    ellipse(width/2 + 10 + x1, height/2 + 10 + y1, 30, 30);
+    //}
   }
   
   void drawEnemiesD()
   {
+    //if(fall ==  false)
+    //{
     strokeWeight(1);
     translate(-1000, 10);
-    //scale(1);
+    //scale(0.4);
     stroke(0);
     fill(254, 209, 146);
-    ellipse(width/2, height/2, 100, 100);
-    rect(width/2 - 25, height/2 - 80, 50, 50, 10);
+    ellipse(width/2 + x1,height/2 + y1, 100, 100);
+    rect(width/2 - 25 + x1, height/2 - 80 + y1, 50, 50, 10);
     fill(0);
-    rect(width/2 - 10, height/2 - 95, 20, 20, 5);
-    arc(width/2, height/2 - 80, 40, 40, 0, PI);
-    line(width/2 - 10, 280, width/2 + 10, 280);
-    line(width/2 - 20, 265, width/2 - 5, 270);
-    line(width/2 + 20, 265, width/2 + 5, 270);
+    rect(width/2 - 10 + x1, height/2 - 95 + y1, 20, 20, 5);
+    arc(width/2 + x1, height/2 - 80 + y1, 40, 40, 0, PI);
+    line(width/2 - 10 + x1, 280 + y1, width/2 + 10 + x1, 280 + y1);
+    line(width/2 - 20 + x1, 265 + y1, width/2 - 5 + x1, 270 + y1);
+    line(width/2 + 20 + x1, 265 + y1, width/2 + 5 + x1, 270 + y1);
     stroke(253, 153, 51);
-    line(width/2 - 20, height/2 - 100, width/2 + 5, height/2 - 85);
+    line(width/2 - 20 + x1, height/2 - 100 + y1, width/2 + 5 + x1, height/2 - 85 + y1);
     stroke(0);
     fill(0, 119, 0);
-    triangle(275, 330, 325, 375, 375, 330);
+    triangle(275 + x1, 330 + y1, 325 + x1, 375 + y1, 375 + x1, 330 + y1);
     fill(254, 209, 146);
-    rect(275, 357, 35, 20, 5);
-    rect(340, 357, 35, 20, 5);
-    ellipse(275, 320, 30, 30);
-    ellipse(375, 320, 30, 30);
+    rect(275 + x1, 357 + y1, 35, 20, 5);
+    rect(340 + x1, 357 + y1, 35, 20, 5);
+    ellipse(275 + x1, 320 + y1, 30, 30);
+    ellipse(375 + x1,320 + y1, 30, 30);
     fill(255, 0, 0);
-    line(width/2 + 10, height/2-5, width/2 + 30, height/2-5);
-    line(width/2 - 10, height/2-5, width/2 - 30, height/2-5);
+    line(width/2 + 10 + x1, height/2-5 + y1, width/2 + 30 + x1,height/2-5 + y1);
+    line(width/2 - 10 + x1, height/2-5 + y1, width/2 - 30 + x1, height/2-5 + y1);
+    //}
   }
   
   void drawEnemiesU()
   {
+    //if(fall ==  false)
+    //{
     strokeWeight(1);
     translate(-1000, 10);
-    //scale(1);
+    //scale(0.4);
     stroke(0);
     fill(254, 209, 146);
-    rect(width/2 - 25, height/2 - 90, 50, 50, 10);
-    ellipse(275, 320, 30, 30);
-    ellipse(375, 320, 30, 30);
-    rect(275, 357, 35, 20, 5);
-    rect(340, 357, 35, 20, 5);
-    ellipse(width/2, height/2, 100, 100);
+    rect(width/2 - 25 + x1,height/2 - 90 + y1, 50, 50, 10);
+    ellipse(275 + x1,320 + y1, 30, 30);
+    ellipse(375 + x1, 320 + y1, 30, 30);
+    rect(275 + x1,357 + y1, 35, 20, 5);
+    rect(340 + x1, 357 + y1, 35, 20, 5);
+    ellipse(width/2 + x1, height/2 + y1, 100, 100);
     stroke(253, 153, 51);
-    line(width/2 - 20, height/2 - 100, width/2 + 5, height/2 - 85);
+    line(width/2 - 20 + x1, height/2 - 100 + y1, width/2 + 5 + x1, height/2 - 85 + y1);
     noStroke();
     fill(0);
-    rect(width/2 - 25, height/2 - 90, 50, 30, 10);
-    rect(width/2 - 10, height/2 - 105, 20, 20, 5);
+    rect(width/2 - 25 + x1, height/2 - 90 + y1, 50, 30, 10);
+    rect(width/2 - 10 + x1, height/2 - 105 + y1, 20, 20, 5);
     stroke(0);
     fill(0, 119, 0);;
-    triangle(275, 330, 325, 375, 375, 330);
+    triangle(275 + x1, 330 + y1, 325 + x1, 375 + y1, 375 + x1, 330 + y1);
   }
   
   /*
@@ -127,28 +135,28 @@ class Enemies
     scale(scale1);
     stroke(0);
     fill(254, 209, 146);
-    rect(320 + moveX, 375 + moveY, 35, 20, 5);
-    ellipse(width/2 + moveX + x, height/2+10 + moveY + y, 100 + diameter, 100 + diameter);
+    rect(320 + x1, 375 + y1, 35, 20, 5);
+    ellipse(width/2 + x1 + x, height/2+10 + y1 + y, 100 + diameter, 100 + diameter);
     stroke(0);
     fill(252, 13, 27);
-    arc(width/2 + moveX, height/2 + 15 + moveY, 95, 95, 0 + 1.5, PI);
+    arc(width/2 + x1, height/2 + 15 + y1, 95, 95, 0 + 1.5, PI);
     stroke(0);
     fill(254, 209, 146);
-    rect(300 + moveX, 370 + moveY, 35, 20, 5);
-    rect(width/2 - 25 + moveX, height/2 - 80 + moveY, 50, 50, 10);
+    rect(300 + x1, 370 + y1, 35, 20, 5);
+    rect(width/2 - 25 + x1, height/2 - 80 + y1, 50, 50, 10);
     fill(0);
-    line(width/2 - 25 + moveX, 280 + moveY,width/2 - 10 + moveX, 280 + moveY);
-    line(width/2 - 25 + moveX, 267 + moveY,width/2 - 15 + moveX, 264 + moveY);
-    rect(width/2 + moveX, height/2 - 95 + moveY, 20, 20, 5);
-    arc(width/2 + moveX, height/2 - 80 + moveY, 40, 40, 0, PI);
-    arc(width/2 + 24 + moveX, height/2 - 77 + moveY, 45, 60, 0 + 1.5, PI);
+    line(width/2 - 25 + x1, 280 + y1,width/2 - 10 + x1, 280 + y1);
+    line(width/2 - 25 + x1, 267 + y1,width/2 - 15 + x1, 264 + y1);
+    rect(width/2 + x1, height/2 - 95 + y1, 20, 20, 5);
+    arc(width/2 + x1, height/2 - 80 + y1, 40, 40, 0, PI);
+    arc(width/2 + 24 + x1, height/2 - 77 + y1, 45, 60, 0 + 1.5, PI);
     stroke(253, 153, 51);
-    line(width/2 + 20 + moveX, height/2 - 100 + moveY,width/2 + 5 + moveX, height/2 - 85 + moveY);
+    line(width/2 + 20 + x1, height/2 - 100 + y1,width/2 + 5 + x1, height/2 - 85 + y1);
     stroke(0);
-    line(width/2 - 49 + moveX, 340 + moveY,width/2 +50 + moveX, 340 + moveY);
-    line(width/2 - 40 + moveX, 320 + moveY,width/2 - 20 + moveX, 320 + moveY);
+    line(width/2 - 49 + x1, 340 + y1,width/2 +50 + x1, 340 + y1);
+    line(width/2 - 40 + x1, 320 + y1,width/2 - 20 + x1, 320 + y1);
     fill(254, 209, 146);
-    ellipse(width/2 - 10 + moveX, height/2 + 10 + moveY, 30, 30);
+    ellipse(width/2 - 10 + x1, height/2 + 10 + y1, 30, 30);
     }
   }
   
@@ -161,28 +169,28 @@ class Enemies
     scale(scale1);
     stroke(0);
     fill(254, 209, 146);
-    rect(320 + moveX, 375 + moveY, 35, 20, 5);
-    ellipse(width/2 + moveX, height/2+10 + moveY, 100, 100);
+    rect(320 + x1, 375 + y1, 35, 20, 5);
+    ellipse(width/2 + x1, height/2+10 + y1, 100, 100);
     stroke(0);
     fill(252, 13, 27);
-    arc(width/2 + 2 + moveX, height/2 + 15 + moveY, 95, 95, 0 , PI-1.55);
+    arc(width/2 + 2 + x1, height/2 + 15 + y1, 95, 95, 0 , PI-1.55);
     stroke(0);
     fill(254, 209, 146);
-    rect(300 + moveX, 370 + moveY, 35, 20, 5);
-    rect(width/2 - 25 + moveX, height/2 - 80 + moveY, 50, 50, 10);
+    rect(300 + x1, 370 + y1, 35, 20, 5);
+    rect(width/2 - 25 + x1, height/2 - 80 + y1, 50, 50, 10);
     fill(0);
-    line(width/2 + 25 + moveX, 280 + moveY, width/2 + 10 + moveX, 280 + moveY);
-    line(width/2 + 25 + moveX, 264 + moveY, width/2 + 15 + moveX, 264 + moveY);
-    rect(width/2 - 20 + moveX, height/2 - 95 + moveY, 20, 20, 5);
-    arc(width/2 + moveX, height/2 - 80 + moveY, 40, 40, 0, PI);
-    arc(width/2 - 25 + moveX, height/2 - 65 + moveY, 45, 30, 0 + 4.7, PI+4.7);
+    line(width/2 + 25 + x1, 280 + y1, width/2 + 10 + x1, 280 + y1);
+    line(width/2 + 25 + x1, 264 + y1, width/2 + 15 + x1, 264 + y1);
+    rect(width/2 - 20 + x1, height/2 - 95 + y1, 20, 20, 5);
+    arc(width/2 + x1, height/2 - 80 + y1, 40, 40, 0, PI);
+    arc(width/2 - 25 + x1, height/2 - 65 + y1, 45, 30, 0 + 4.7, PI+4.7);
     stroke(253, 153, 51);
-    line(width/2 - 25 + moveX, height/2 - 100 + moveY,width/2 - 5 + moveX, height/2 - 85 + moveY);
+    line(width/2 - 25 + x1, height/2 - 100 + y1,width/2 - 5 + x1, height/2 - 85 + y1);
     stroke(0);
-    line(width/2 - 49 + moveX, 340 + moveY, width/2 +50 + moveX, 340 + moveY);
-    line(width/2 + 40 + moveX, 320 + moveY, width/2 + 20 + moveX, 320 + moveY);
+    line(width/2 - 49 + x1, 340 + y1, width/2 +50 + x1, 340 + y1);
+    line(width/2 + 40 + x1, 320 + y1, width/2 + 20 + x1, 320 + y1);
     fill(254, 209, 146);
-    ellipse(width/2 + 10 + moveX, height/2 + 10 + moveY, 30, 30);
+    ellipse(width/2 + 10 + x1, height/2 + 10 + y1, 30, 30);
     }
   }
   
@@ -195,27 +203,27 @@ class Enemies
     scale(scale1);
     stroke(0);
     fill(254, 209, 146);
-    ellipse(width/2 + moveX,height/2 + moveY, 100, 100);
-    rect(width/2 - 25 + moveX, height/2 - 80 + moveY, 50, 50, 10);
+    ellipse(width/2 + x1,height/2 + y1, 100, 100);
+    rect(width/2 - 25 + x1, height/2 - 80 + y1, 50, 50, 10);
     fill(0);
-    rect(width/2 - 10 + moveX, height/2 - 95 + moveY, 20, 20, 5);
-    arc(width/2 + moveX, height/2 - 80 + moveY, 40, 40, 0, PI);
-    line(width/2 - 10 + moveX, 280 + moveY, width/2 + 10 + moveX, 280 + moveY);
-    line(width/2 - 20 + moveX, 265 + moveY, width/2 - 5 + moveX, 270 + moveY);
-    line(width/2 + 20 + moveX, 265 + moveY, width/2 + 5 + moveX, 270 + moveY);
+    rect(width/2 - 10 + x1, height/2 - 95 + y1, 20, 20, 5);
+    arc(width/2 + x1, height/2 - 80 + y1, 40, 40, 0, PI);
+    line(width/2 - 10 + x1, 280 + y1, width/2 + 10 + x1, 280 + y1);
+    line(width/2 - 20 + x1, 265 + y1, width/2 - 5 + x1, 270 + y1);
+    line(width/2 + 20 + x1, 265 + y1, width/2 + 5 + x1, 270 + y1);
     stroke(253, 153, 51);
-    line(width/2 - 20 + moveX, height/2 - 100 + moveY, width/2 + 5 + moveX, height/2 - 85 + moveY);
+    line(width/2 - 20 + x1, height/2 - 100 + y1, width/2 + 5 + x1, height/2 - 85 + y1);
     stroke(0);
     fill(252, 13, 27);
-    triangle(275 + moveX, 330 + moveY, 325 + moveX, 375 + moveY, 375 + moveX, 330 + moveY);
+    triangle(275 + x1, 330 + y1, 325 + x1, 375 + y1, 375 + x1, 330 + y1);
     fill(254, 209, 146);
-    rect(275 + moveX, 357 + moveY, 35, 20, 5);
-    rect(340 + moveX, 357 + moveY, 35, 20, 5);
-    ellipse(275 + moveX, 320 + moveY, 30, 30);
-    ellipse(375 + moveX,320 + moveY, 30, 30);
+    rect(275 + x1, 357 + y1, 35, 20, 5);
+    rect(340 + x1, 357 + y1, 35, 20, 5);
+    ellipse(275 + x1, 320 + y1, 30, 30);
+    ellipse(375 + x1,320 + y1, 30, 30);
     fill(255, 0, 0);
-    line(width/2 + 10 + moveX, height/2-5 + moveY, width/2 + 30 + moveX,height/2-5 + moveY);
-    line(width/2 - 10 + moveX, height/2-5 + moveY, width/2 - 30 + moveX, height/2-5 + moveY);
+    line(width/2 + 10 + x1, height/2-5 + y1, width/2 + 30 + x1,height/2-5 + y1);
+    line(width/2 - 10 + x1, height/2-5 + y1, width/2 - 30 + x1, height/2-5 + y1);
     }
   }
   
@@ -228,21 +236,21 @@ class Enemies
     scale(scale1);
     stroke(0);
     fill(254, 209, 146);
-    rect(width/2 - 25 + moveX,height/2 - 90 + moveY, 50, 50, 10);
-    ellipse(275 + moveX,320 + moveY, 30, 30);
-    ellipse(375 + moveX, 320 + moveY, 30, 30);
-    rect(275 + moveX,357 + moveY, 35, 20, 5);
-    rect(340 + moveX, 357 + moveY, 35, 20, 5);
-    ellipse(width/2 + moveX, height/2 + moveY, 100, 100);
+    rect(width/2 - 25 + x1,height/2 - 90 + y1, 50, 50, 10);
+    ellipse(275 + x1,320 + y1, 30, 30);
+    ellipse(375 + x1, 320 + y1, 30, 30);
+    rect(275 + x1,357 + y1, 35, 20, 5);
+    rect(340 + x1, 357 + y1, 35, 20, 5);
+    ellipse(width/2 + x1, height/2 + y1, 100, 100);
     stroke(253, 153, 51);
-    line(width/2 - 20 + moveX, height/2 - 100 + moveY, width/2 + 5 + moveX, height/2 - 85 + moveY);
+    line(width/2 - 20 + x1, height/2 - 100 + y1, width/2 + 5 + x1, height/2 - 85 + y1);
     noStroke();
     fill(0);
-    rect(width/2 - 25 + moveX, height/2 - 90 + moveY, 50, 30, 10);
-    rect(width/2 - 10 + moveX, height/2 - 105 + moveY, 20, 20, 5);
+    rect(width/2 - 25 + x1, height/2 - 90 + y1, 50, 30, 10);
+    rect(width/2 - 10 + x1, height/2 - 105 + y1, 20, 20, 5);
     stroke(0);
     fill(252, 13, 27);
-    triangle(275 + moveX, 330 + moveY, 325 + moveX, 375 + moveY, 375 + moveX, 330 + moveY);
+    triangle(275 + x1, 330 + y1, 325 + x1, 375 + y1, 375 + x1, 330 + y1);
   }*/
 
 
@@ -272,7 +280,7 @@ class Enemies
       leftDirection2 = false;
       upDirection2 = false;
       downDirection2 = true;
-      moveY = moveY + xSpeed; 
+      y1 = y1 + xSpeed; 
       //scale1 = scale1 + scale2;
     }
     
@@ -282,7 +290,7 @@ class Enemies
       leftDirection2 = false;
       downDirection2 = false;
       upDirection2 = true;
-      moveY = moveY - xSpeed; 
+      y1 = y1 - xSpeed; 
       //scale1 = scale1 - scale2;
     }
   }
