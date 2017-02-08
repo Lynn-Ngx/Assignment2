@@ -4,7 +4,6 @@ class Score
   {
     background(128, 216, 253);
     PFont f = createFont("Bradley Hand", 20);
-    fill(0);
     textFont(f);
     fill(252, 13, 27);
     text(q, 20, 25);

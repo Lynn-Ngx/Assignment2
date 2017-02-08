@@ -54,8 +54,7 @@ class Background
     button();
     enemies.fall();
     sumo.fall();
-    //enemies.drawEnemiesR();
-    
+       
     if (rightDirection){
         sumo.drawSumoR();
         //enemies.drawEnemiesR();

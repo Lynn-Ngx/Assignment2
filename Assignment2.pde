@@ -140,7 +140,7 @@ void draw()
     settings.drawSettings();
   }
   
-  if(rounds1 == 1)
+  if(rounds1 == 5)
   {
     over.drawOver();
   }
